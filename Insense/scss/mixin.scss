@@ -1,0 +1,33 @@
+@mixin size-set($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin size-set-color($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background: $color;
+}
+@mixin flex-set($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin font-set($size, $weight, $align, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  text-align: $align;
+  color: $color;
+}
+@mixin absolute-top-left($top, $left, $translate) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: $translate;
+}
+@mixin absolute-top-right($top, $right, $translate) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  transform: $translate;
+}
