@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin size-set($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin flex-set($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin font-set($size, $weight, $align, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  text-align: $align;
+  color: $color;
+}
+
+body {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  @include size-set(100vw, 100vh);
+  @include flex-set(center, center, row);
+  
+  section {
+    @include size-set(50vw, 100vh);
+  }
+
+  #text {
+    @include flex-set(center, center, column);
+    background-color: #F7F3E7;
+
+    h2 {
+      font-family: Bad Script;
+      @include font-set(55px, normal, center, #5B5B5B);
+      font-style: italic;
+    }
+    p {
+      font-family: Gowun Dodum;
+      @include size-set(20vw, 10vh);
+      @include font-set(20px, normal, center, #6A6A6A);
+      margin-top: 6vh;
+      position: relative;
+      
+      span {
+        @include size-set(2px, 30px);
+        background-color: #C7C7C7;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-80%);
+      }
+      #left {
+        left: 0;
+      }
+      #right {
+        right: 0;
+      }
+    }
+  }
+}
