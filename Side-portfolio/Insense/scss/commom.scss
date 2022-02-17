@@ -1,0 +1,59 @@
+$font-color1 : #5B5B5B;
+
+// mixin set *************************
+@mixin size-set($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin size-set-color($width, $height, $color) {
+  width: $width;
+  height: $height;
+  background: $color;
+}
+@mixin flex-set($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin font-set($size, $weight, $align, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  text-align: $align;
+  color: $color;
+}
+@mixin absolute-top-left($top, $left, $translate) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: $translate;
+}
+@mixin absolute-top-right($top, $right, $translate) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  transform: $translate;
+}
+@mixin relative-top-left($top, $left) {
+  position: relative;
+  top: $top;
+  left: $left;
+}
+
+// style set *************************
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include size-set(100vw, 10vh);
+  @include flex-set(flex-end, center, row);
+
+  nav ul {
+    @include size-set(40vw, 10vh);
+    @include flex-set(space-evenly, center, row);
+
+    li a {
+      @include font-set(1.125em, 400, center, $font-color1);
+    }
+  }
+}
