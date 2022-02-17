@@ -39,13 +39,21 @@ $font-color1 : #5B5B5B;
   top: $top;
   left: $left;
 }
+@mixin relative-top-right($top, $right) {
+  position: relative;
+  top: $top;
+  right: $right;
+}
 
 // style set *************************
 header {
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
-  @include size-set(100vw, 10vh);
+  opacity: 0;
+  z-index: 10;
+
+  @include size-set-color(100vw, 10vh, #F7F3E7CC);
   @include flex-set(flex-end, center, row);
 
   nav ul {
@@ -53,7 +61,26 @@ header {
     @include flex-set(space-evenly, center, row);
 
     li a {
-      @include font-set(1.125em, 400, center, $font-color1);
+      @include font-set(1.05em, 400, center, $font-color1);
+      position: relative;
+    }
+    li a::before {
+      content: '';
+      @include absolute-top-left(120%, 50%, translateX(-50%));
+      @include size-set-color(0, 1px, #FFC000);
+      transition: .5s;
+    }
+    li a.on {
+      font-weight: 500;
+    }
+    li a.on::before {
+      width: 22px;
+    }
+    li a:hover {
+      font-weight: 500;
+    }
+    li a:hover::before {
+      width: 22px;
     }
   }
 }

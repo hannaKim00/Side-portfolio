@@ -1,9 +1,12 @@
 header {
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
+  opacity: 0;
+  z-index: 10;
   width: 100vw;
   height: 10vh;
+  background: #F7F3E7CC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,9 +41,40 @@ header nav ul {
 }
 
 header nav ul li a {
-  font-size: 1.125em;
+  font-size: 1.05em;
   font-weight: 400;
   text-align: center;
   color: #5B5B5B;
+  position: relative;
+}
+
+header nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: #FFC000;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav ul li a.on {
+  font-weight: 500;
+}
+
+header nav ul li a.on::before {
+  width: 22px;
+}
+
+header nav ul li a:hover {
+  font-weight: 500;
+}
+
+header nav ul li a:hover::before {
+  width: 22px;
 }
 /*# sourceMappingURL=commom.css.map */
