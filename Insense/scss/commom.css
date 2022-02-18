@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #282828;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 header {
   position: fixed;
   top: -100%;

@@ -1,0 +1,88 @@
+@import "commom.scss";
+
+// kind set ********************************
+#kind-container {
+  @include size-set-color(100vw, 252vh, #E9E3DD);
+
+  //line
+  span {
+    text-indent: -9999em;
+    @include size-set-color(1px, 230vh, #D4CDCA);
+    @include absolute-top-left(15%, 50%, translateX(-50%)); 
+  };
+
+  #content {
+    padding-top: 20vh;
+    @include flex-set(center, center, column);
+    
+    & > div {
+      @include size-set(60vw, 45vh);
+      @include flex-set(center, center, row);
+      @include relative-top-left(0, -4vw);
+      margin: 5vh 0;
+      opacity: 0;
+
+      #textWrap {
+        width: 50vw;
+        @include font-set(1em, normal, center, $font-color2);
+
+        strong {
+        @include font-set(1.20em, 500, center, $font-color2);
+        }
+
+        p {
+          margin-top: 3vh;
+        }
+      }
+
+      #imgwrap {
+        width: 50vw;
+        @include flex-set(center, center, row);
+
+        img {
+          @include size-set(20vw, 100%);
+          @include relative-top-left(0, 6.5vw);
+          
+        }
+
+        div {
+          text-indent: -9999em;
+          @include size-set-color(15vw, 40vh, #ACACAC80);
+        }
+      }
+    }
+
+    & > div:nth-child(2n) {
+      @include flex-set(space-evenly, center, row-reverse);
+      @include relative-top-left(0, 4vw);
+
+      #imgwrap {
+        @include flex-set(space-evenly, center, row-reverse);
+
+        img {
+          @include relative-top-left(0, -7vw);
+        }
+        
+        div {
+          @include size-set-color(15vw, 40vh, #914D2E80);
+        }
+      }
+    }
+
+    & > div:nth-child(3) {
+      #imgwrap {
+        div {
+          @include size-set-color(15vw, 40vh, #F1D88B80);
+        }
+      }
+    }
+
+    & > div:nth-child(4) {
+      #imgwrap {
+        div {
+          @include size-set-color(15vw, 40vh, #3B3B3B80);
+        }
+      }
+    }
+  }
+}

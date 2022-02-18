@@ -1,0 +1,51 @@
+@import "commom.scss";
+
+.test-border1 {
+  border: 1px solid red;
+}
+.test-border2 {
+  border: 1px solid blue;
+}
+.test-border3 {
+  border: 1px solid green;
+}
+
+#recommen-container {
+  @include size-set-color(100vw, 100vh, $background-color1);
+  @include flex-set(center, center, column);
+  padding-top: 10vh;
+
+  > div {
+    border: 1px solid red;
+  }
+  
+  #sub-menu ul {
+    @include size-set(30vw, 8vh);
+    @include flex-set(space-between, center, row);
+  }
+
+  #content {
+    height: 60vh;
+    
+    ul {
+      @include size-set(80vw, 40vh);
+      @include flex-set(space-between, center, row);
+      @include relative-top-left(0, 0);
+      border: 1px solid blue;
+      margin: 10vh 0 15vh;
+      opacity: 0;
+    }
+    ul:nth-child(2) {
+      @include relative-top-left(-55vh, 0);
+    }
+    ul:nth-child(3) {
+      @include relative-top-left(-110vh, 0);
+    }
+    ul:nth-child(4) {
+      @include relative-top-left(-165vh, 0);
+    }
+    ul:nth-child(5) {
+      @include relative-top-left(-220vh, 0);
+    }
+  } 
+}

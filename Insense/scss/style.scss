@@ -1,28 +1,4 @@
 @import "commom.scss";
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap');
-
-$font-color1 : #5B5B5B;
-$font-color2 : #282828;
-$background-color1 : #F7F3E7;
-
-// reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-ul {
-  list-style: none;
-}
-a {
-  color: #282828;
-  text-decoration: none;
-}
-body {
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: 'IBM Plex Sans KR', sans-serif;
-}
 
 // test
 .test-barder1 {
@@ -131,73 +107,5 @@ body {
   span {
     @include absolute-top-left(97%, 50%, translateX(-50%));
     @include size-set-color(90vw, 2px, #fff);
-  }
-}
-
-
-// kind set ********************************
-#kind-container {
-  @include size-set-color(100vw, 252vh, #E9E3DD);
-
-  span {
-    text-indent: -9999em;
-    @include size-set-color(1px, 230vh, #D4CDCA);
-    @include absolute-top-left(15%, 50%, translateX(-50%)); 
-  };
-
-  #content {
-    padding-top: 20vh;
-    @include flex-set(center, center, column);
-    
-    & > div {
-      @include size-set(60vw, 45vh);
-      @include flex-set(center, center, row);
-      @include relative-top-left(0, -4vw);
-      // padding: 0 3vw 0 0;
-      margin: 5vh 0;
-      opacity: 0;
-
-      #textWrap {
-        width: 50vw;
-        @include font-set(1em, normal, center, $font-color2);
-
-        strong {
-        @include font-set(1.20em, 500, center, $font-color2);
-        }
-
-        p {
-          margin-top: 3vh;
-        }
-      }
-
-      #imgwrap {
-        width: 50vw;
-        @include flex-set(center, center, row);
-
-        img {
-          @include size-set(20vw, 100%);
-          @include relative-top-left(0, 6.5vw);
-          
-        }
-
-        div {
-          @include size-set(15vw, 40vh);
-        }
-      }
-    }
-
-    & > div:nth-child(2n) {
-      @include flex-set(space-evenly, center, row-reverse);
-      // padding: 0 2vw 0 3vw;
-      @include relative-top-left(0, 4vw);
-
-      #imgwrap {
-        @include flex-set(space-evenly, center, row-reverse);
-
-        img {
-          @include relative-top-left(0, -7vw);
-        }
-      }
-    }
   }
 }

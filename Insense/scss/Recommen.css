@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #282828;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  opacity: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 10vh;
+  background: #F7F3E7CC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav ul {
+  width: 40vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav ul li a {
+  font-size: 1.05em;
+  font-weight: 400;
+  text-align: center;
+  color: #5B5B5B;
+  position: relative;
+}
+
+header nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: #FFC000;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header nav ul li a.on {
+  font-weight: 500;
+}
+
+header nav ul li a.on::before {
+  width: 22px;
+}
+
+header nav ul li a:hover {
+  font-weight: 500;
+}
+
+header nav ul li a:hover::before {
+  width: 22px;
+}
+
+.test-border1 {
+  border: 1px solid red;
+}
+
+.test-border2 {
+  border: 1px solid blue;
+}
+
+.test-border3 {
+  border: 1px solid green;
+}
+
+#recommen-container {
+  width: 100vw;
+  height: 100vh;
+  background: #F7F3E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 10vh;
+}
+
+#recommen-container > div {
+  border: 1px solid red;
+}
+
+#recommen-container #sub-menu ul {
+  width: 30vw;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#recommen-container #content {
+  height: 60vh;
+}
+
+#recommen-container #content ul {
+  width: 80vw;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 1px solid blue;
+  margin: 10vh 0 15vh;
+  opacity: 0;
+}
+
+#recommen-container #content ul:nth-child(2) {
+  position: relative;
+  top: -55vh;
+  left: 0;
+}
+
+#recommen-container #content ul:nth-child(3) {
+  position: relative;
+  top: -110vh;
+  left: 0;
+}
+
+#recommen-container #content ul:nth-child(4) {
+  position: relative;
+  top: -165vh;
+  left: 0;
+}
+
+#recommen-container #content ul:nth-child(5) {
+  position: relative;
+  top: -220vh;
+  left: 0;
+}
+/*# sourceMappingURL=Recommen.css.map */

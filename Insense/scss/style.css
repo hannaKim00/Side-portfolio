@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #282828;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
 header {
   position: fixed;
   top: -100%;
@@ -77,28 +99,6 @@ header nav ul li a:hover {
 
 header nav ul li a:hover::before {
   width: 22px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: #282828;
-  text-decoration: none;
-}
-
-body {
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 
 .test-barder1 {
@@ -280,153 +280,5 @@ body {
   width: 90vw;
   height: 2px;
   background: #fff;
-}
-
-#kind-container {
-  width: 100vw;
-  height: 252vh;
-  background: #E9E3DD;
-}
-
-#kind-container span {
-  text-indent: -9999em;
-  width: 1px;
-  height: 230vh;
-  background: #D4CDCA;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#kind-container #content {
-  padding-top: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#kind-container #content > div {
-  width: 60vw;
-  height: 45vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  top: 0;
-  left: -4vw;
-  margin: 5vh 0;
-  opacity: 0;
-}
-
-#kind-container #content > div #textWrap {
-  width: 50vw;
-  font-size: 1em;
-  font-weight: normal;
-  text-align: center;
-  color: #282828;
-}
-
-#kind-container #content > div #textWrap strong {
-  font-size: 1.2em;
-  font-weight: 500;
-  text-align: center;
-  color: #282828;
-}
-
-#kind-container #content > div #textWrap p {
-  margin-top: 3vh;
-}
-
-#kind-container #content > div #imgwrap {
-  width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#kind-container #content > div #imgwrap img {
-  width: 20vw;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 6.5vw;
-}
-
-#kind-container #content > div #imgwrap div {
-  width: 15vw;
-  height: 40vh;
-}
-
-#kind-container #content > div:nth-child(2n) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  position: relative;
-  top: 0;
-  left: 4vw;
-}
-
-#kind-container #content > div:nth-child(2n) #imgwrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#kind-container #content > div:nth-child(2n) #imgwrap img {
-  position: relative;
-  top: 0;
-  left: -7vw;
 }
 /*# sourceMappingURL=style.css.map */
