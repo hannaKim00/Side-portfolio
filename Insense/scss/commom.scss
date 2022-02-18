@@ -84,7 +84,7 @@ header {
     @include flex-set(space-evenly, center, row);
 
     li a {
-      @include font-set(1.05em, 400, center, $font-color1);
+      @include font-set(1.15em, 400, center, $font-color1);
       position: relative;
     }
     li a::before {
