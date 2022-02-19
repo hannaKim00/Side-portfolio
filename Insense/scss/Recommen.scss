@@ -1,16 +1,11 @@
 @import "commom.scss";
 
-.test-border1 {
-  border: 1px solid red;
-}
+// class
 .opacity0 {
   opacity: 0;
 }
 .opacity1 {
   opacity: 0;
-}
-.on {
-  font-weight: 500;
 }
 
 #recommen-container {
@@ -35,41 +30,57 @@
     li:hover {
       font-weight: 500;
     }
+    li.on {
+      font-weight: 500;
+    }
   }
 
   #content {
     height: 60vh;
     
-    ul {
+    & > div {
       @include size-set(75vw, 40vh);
-      @include flex-set(space-between, center, row);
       margin: 10vh 0 15vh;
+      display: none;
 
-      li {
-        strong {
-          @include font-set(1.1em, 400, center, $font-color2);
-          display: block;
-          padding: 1vh 0;
+      ul {
+        @include flex-set(space-between, center, row);
+  
+        li {
+  
+          span {
+            @include size-set(100%, 100%);
+            display: block;
+            overflow: hidden;
+  
+            img {
+            @include size-set(100%, 100%);
+            vertical-align : top;
+            transition: .5s;
+            }
+          }
+          
+          strong {
+            @include font-set(1.1em, 400, center, $font-color2);
+            display: block;
+            padding: 1vh 0;
+          }
+
+          p {
+            @include font-set(1em, 400, center, $font-color2);
+          }
         }
-        p {
-          @include font-set(1em, 400, center, $font-color2);
+        li:hover span img {
+          transform: scale(1.08);
+        }
+        li:hover > div * {
+          font-weight: 500;
         }
       }
     }
-    ul:nth-child(1) {
-      opacity: 1;
-    }
-    ul:nth-child(2) {
-      @include relative-top-left(-55vh, 0);
-    }
-    ul:nth-child(3) {
-      @include relative-top-left(-110vh, 0);
-    }
-    ul:nth-child(4) {
-      @include relative-top-left(-165vh, 0);
-    }
-    ul:nth-child(5) {
-      @include relative-top-left(-220vh, 0);
+
+    & > div:nth-child(1) {
+      display: block;
     }
   } 
 }

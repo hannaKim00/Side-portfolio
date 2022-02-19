@@ -101,18 +101,10 @@ header nav ul li a:hover::before {
   width: 22px;
 }
 
-.opacity0 {
-  opacity: 0;
-}
-
-.opacity1 {
-  opacity: 0;
-}
-
-#recommen-container {
+#use-container {
   width: 100vw;
-  height: 100vh;
-  background: #F7F3E7;
+  height: 200vh;
+  background: #E9E5DA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,60 +118,12 @@ header nav ul li a:hover::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 10vh;
+  padding-top: 25vh;
 }
 
-#recommen-container > div {
-  position: relative;
-  top: -5vw;
-  left: 0;
-}
-
-#recommen-container #sub-menu ul {
-  width: 30vw;
-  height: 8vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-#recommen-container #sub-menu ul li {
-  font-size: 1.15em;
-  color: #282828;
-  cursor: pointer;
-  padding: 1vh 1vw;
-}
-
-#recommen-container #sub-menu ul li:hover {
-  font-weight: 500;
-}
-
-#recommen-container #sub-menu ul li.on {
-  font-weight: 500;
-}
-
-#recommen-container #content {
-  height: 60vh;
-}
-
-#recommen-container #content > div {
+#use-container section {
   width: 75vw;
-  height: 40vh;
-  margin: 10vh 0 15vh;
-  display: none;
-}
-
-#recommen-container #content > div ul {
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,49 +137,66 @@ header nav ul li a:hover::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 15vh;
+  border: 1px solid blue;
 }
 
-#recommen-container #content > div ul li span {
-  width: 100%;
+#use-container section > div {
+  width: 50%;
   height: 100%;
-  display: block;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid red;
 }
 
-#recommen-container #content > div ul li span img {
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-#recommen-container #content > div ul li strong {
-  font-size: 1.1em;
-  font-weight: 400;
-  text-align: center;
-  color: #282828;
-  display: block;
-  padding: 1vh 0;
-}
-
-#recommen-container #content > div ul li p {
+#use-container section > div > div {
   font-size: 1em;
-  font-weight: 400;
-  text-align: center;
+  font-weight: normal;
+  text-align: left;
   color: #282828;
 }
 
-#recommen-container #content > div ul li:hover span img {
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-}
-
-#recommen-container #content > div ul li:hover > div * {
+#use-container section > div > div strong {
+  font-size: 1.1em;
   font-weight: 500;
+  text-align: left;
+  color: #505050;
 }
 
-#recommen-container #content > div:nth-child(1) {
-  display: block;
+#use-container section > div > div strong span {
+  font-size: 3em;
+  font-weight: 400;
+  text-align: left;
+  color: #505050;
+  margin-right: .3vw;
 }
-/*# sourceMappingURL=Recommen.css.map */
+
+#use-container section > div > div:nth-child(2) {
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#use-container section > div > div:nth-child(2) span {
+  margin-right: 0;
+  margin-left: .4vw;
+}
+
+#use-container section:nth-child(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/*# sourceMappingURL=use.css.map */

@@ -1,0 +1,45 @@
+@import "commom.scss";
+
+#use-container {
+  @include size-set-color(100vw, 200vh, #E9E5DA);
+  @include flex-set(center, center, column);
+  padding-top: 25vh;
+
+  section {
+    @include size-set(75vw, 70vh);
+    @include flex-set(space-between, center, row);
+    margin-bottom: 15vh;
+    border: 1px solid blue;
+
+    & > div {
+      @include size-set(50%, 100%);
+      @include flex-set(space-between, flex-start, column);
+      border: 1px solid red;
+      
+      & > div {
+        @include font-set(1em, normal, left, $font-color2);
+  
+        strong {
+          @include font-set(1.1em, 500, left, $font-color3);
+          
+          span {
+            @include font-set(3em, 400, left, $font-color3);
+            margin-right: .3vw;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        text-align: right;
+        align-self: flex-end;
+
+        span {
+          margin-right: 0;
+          margin-left: .4vw;
+        }
+      }
+    }
+  }
+  section:nth-child(2) {
+    flex-direction : row-reverse;
+  }
+}

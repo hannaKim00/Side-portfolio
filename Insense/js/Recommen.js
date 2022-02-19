@@ -1,11 +1,11 @@
-const contentWRap = document.querySelectorAll('#recommen-container > div');
-// forEach = 배열의 처음부터 마지막 요소까지 반복하여 실행
-
 function opacityTransition(target, opacity, transition) {
   target.style.opacity = opacity;
   target.style.transition = transition;
 };
 
+const contentWRap = document.querySelectorAll('#recommen-container > div');
+
+// forEach = 배열의 처음부터 마지막 요소까지 반복하여 실행
 contentWRap.forEach(function (contentWRap) {
   window.addEventListener('load', function() {
     opacityTransition(contentWRap, '1', '1s');
@@ -14,21 +14,35 @@ contentWRap.forEach(function (contentWRap) {
   });
 });
 
+
 // 탭 메뉴
 const tabMenu = document.querySelectorAll('#sub-menu ul li');
-const content = document.querySelectorAll('#content ul');
+const tabClick = document.querySelectorAll('#sub-menu ul li');
+const content = document.querySelectorAll('#content > div');
 
-content.forEach(function (content) {
-  let contentNum = Number(content.dataset.tab);
-  tabMenu.forEach(function (tabMenu) {
-    let tabNum = Number(tabMenu.dataset.tab);
-    tabMenu.addEventListener('click', function() {
-      if(tabNum === contentNum) {
-        opacityTransition(content, '1', '.5s');
+tabClick.forEach(function (tabClick) {
+  tabClick.addEventListener('click', function() {
+    let tabClickValue = Number(tabClick.dataset.tab);
+    
+    tabMenu.forEach(function (tabMenu) {
+        let tabValue = Number(tabMenu.dataset.tab);
+    
+        if(tabClickValue === tabValue) {
+          tabMenu.className = 'on';
+        } else {
+          tabMenu.className = '';
+        }
+    });
+
+    content.forEach(function (content) {
+      let contentValue = Number(content.dataset.tab);
+      if(tabClickValue === contentValue) {
+        console.log(contentValue);
+        content.style.display = 'block';
       } else {
-        opacityTransition(content, '0', '.5s');
+        content.style.display = 'none';
       }
     });
   });
-});
+})
 
