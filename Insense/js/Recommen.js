@@ -1,15 +1,9 @@
-function opacityTransition(target, opacity, transition) {
-  target.style.opacity = opacity;
-  target.style.transition = transition;
-};
-
 const contentWRap = document.querySelectorAll('#recommen-container > div');
 
 // forEach = 배열의 처음부터 마지막 요소까지 반복하여 실행
 contentWRap.forEach(function (contentWRap) {
   window.addEventListener('load', function() {
-    opacityTransition(contentWRap, '1', '1s');
-    contentWRap.style.transitionDelay = '.8s';
+    opacityTransitionDelay(contentWRap, '1', '1s', '.8s')
     contentWRap.style.top = '-2vh';
   });
 });

@@ -1,12 +1,7 @@
-function opacityTransition(target, opacity, transition) {
-  target.style.opacity = opacity;
-  target.style.transition = transition;
-};
 function menuSlider(target, width, transition) {
   target.style.width = width;
   target.style.transition = transition;
 };
-
 
 const img = document.querySelector('#img');
 const h2 = document.querySelector('#text h2');

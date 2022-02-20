@@ -25,6 +25,7 @@ body {
 }
 
 // mixin set *************************
+// size
 @mixin size-set($width, $height) {
   width: $width;
   height: $height;
@@ -34,18 +35,30 @@ body {
   height: $height;
   background: $color;
 }
+
+// display
 @mixin flex-set($justify, $align, $direction) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
 }
+@mixin grid-set($rows, $columns, $gap) {
+  display: grid;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+// font
 @mixin font-set($size, $weight, $align, $color) {
   font-size: $size;
   font-weight: $weight;
   text-align: $align;
   color: $color;
 }
+
+// position
 @mixin absolute-top-left($top, $left, $translate) {
   position: absolute;
   top: $top;

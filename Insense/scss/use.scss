@@ -1,37 +1,50 @@
 @import "commom.scss";
 
 #use-container {
-  @include size-set-color(100vw, 200vh, #E9E5DA);
+  @include size-set-color(100vw, 170vh, #E9E5DA);
   @include flex-set(center, center, column);
-  padding-top: 25vh;
+  padding-top: 17vh;
 
   section {
-    @include size-set(75vw, 70vh);
+    @include size-set(75vw, 65vh);
     @include flex-set(space-between, center, row);
-    margin-bottom: 15vh;
-    border: 1px solid blue;
+    margin-bottom: 10vh;
+    opacity: 0;
 
+    img {
+      @include size-set(47%, 78%);
+    }
+    
     & > div {
-      @include size-set(50%, 100%);
+      @include size-set(45%, 95%);
       @include flex-set(space-between, flex-start, column);
-      border: 1px solid red;
+      border-top: 2px solid #D4CDCA;
+      padding: 3vh 0;
+      
       
       & > div {
-        @include font-set(1em, normal, left, $font-color2);
-  
+        @include font-set(1.05em, normal, left, $font-color2);
+        
         strong {
-          @include font-set(1.1em, 500, left, $font-color3);
+          @include font-set(1.15em, 500, left, $font-color3);
+          display: flex;
+          align-items: center;
           
           span {
             @include font-set(3em, 400, left, $font-color3);
             margin-right: .3vw;
           }
         }
+        
       }
       & > div:nth-child(2) {
         text-align: right;
         align-self: flex-end;
-
+        
+        strong {
+          justify-content: flex-end;
+        }
+        
         span {
           margin-right: 0;
           margin-left: .4vw;
@@ -39,7 +52,24 @@
       }
     }
   }
+  section:nth-child(1) {
+    img {
+      @include relative-top-left(0, -30vw);
+    }
+    & > div {
+      @include relative-top-right(0, -30vw);
+    }
+  }
   section:nth-child(2) {
     flex-direction : row-reverse;
+    
+    img {
+      @include relative-top-right(0, -30vw);
+    }
+    & > div {
+      border-top: 0;
+      border-bottom: 2px solid #D4CDCA;
+      @include relative-top-left(0, -30vw);
+    }
   }
 }

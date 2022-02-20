@@ -101,10 +101,10 @@ header nav ul li a:hover::before {
   width: 22px;
 }
 
-#use-container {
+#sell-container {
   width: 100vw;
-  height: 170vh;
-  background: #E9E5DA;
+  height: 100vh;
+  background: #F7F3E7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,22 +114,54 @@ header nav ul li a:hover::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-top: 17vh;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  opacity: 0;
 }
 
-#use-container section {
-  width: 75vw;
-  height: 65vh;
+#sell-container ul {
+  width: 70vw;
+  height: 60vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 2vw 2vh;
+  margin-top: 3vh;
+}
+
+#sell-container ul li {
+  position: relative;
+}
+
+#sell-container ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+#sell-container ul li a div {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  font-size: 1.15em;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -137,110 +169,12 @@ header nav ul li a:hover::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 10vh;
+  -webkit-transition: 1s;
+  transition: 1s;
   opacity: 0;
 }
 
-#use-container section img {
-  width: 47%;
-  height: 78%;
+#sell-container ul li:hover div {
+  opacity: 1;
 }
-
-#use-container section > div {
-  width: 45%;
-  height: 95%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-top: 2px solid #D4CDCA;
-  padding: 3vh 0;
-}
-
-#use-container section > div > div {
-  font-size: 1.05em;
-  font-weight: normal;
-  text-align: left;
-  color: #282828;
-}
-
-#use-container section > div > div strong {
-  font-size: 1.15em;
-  font-weight: 500;
-  text-align: left;
-  color: #505050;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#use-container section > div > div strong span {
-  font-size: 3em;
-  font-weight: 400;
-  text-align: left;
-  color: #505050;
-  margin-right: .3vw;
-}
-
-#use-container section > div > div:nth-child(2) {
-  text-align: right;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-#use-container section > div > div:nth-child(2) strong {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-#use-container section > div > div:nth-child(2) span {
-  margin-right: 0;
-  margin-left: .4vw;
-}
-
-#use-container section:nth-child(1) img {
-  position: relative;
-  top: 0;
-  left: -30vw;
-}
-
-#use-container section:nth-child(1) > div {
-  position: relative;
-  top: 0;
-  right: -30vw;
-}
-
-#use-container section:nth-child(2) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#use-container section:nth-child(2) img {
-  position: relative;
-  top: 0;
-  right: -30vw;
-}
-
-#use-container section:nth-child(2) > div {
-  border-top: 0;
-  border-bottom: 2px solid #D4CDCA;
-  position: relative;
-  top: 0;
-  left: -30vw;
-}
-/*# sourceMappingURL=use.css.map */
+/*# sourceMappingURL=sell.css.map */
