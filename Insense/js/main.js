@@ -8,7 +8,7 @@ const h2 = document.querySelector('#text h2');
 const p = document.querySelector('#text p');
 
 window.addEventListener('load', function() {
-  opacityTransition(img, '1', '2s');
+  opacityTransition(img, '1', '1s');
   p.style.left = '0';
   opacityTransition(p, '1', '2s');
   h2.style.top = '0';

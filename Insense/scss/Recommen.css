@@ -101,6 +101,17 @@ header nav ul li a:hover::before {
   width: 22px;
 }
 
+@media all and (min-width: 1024px) and (max-width: 1920px) {
+  #main-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main-container section {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 .opacity0 {
   opacity: 0;
 }
@@ -127,12 +138,6 @@ header nav ul li a:hover::before {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 10vh;
-}
-
-#recommen-container > div {
-  position: relative;
-  top: -5vw;
-  left: 0;
 }
 
 #recommen-container #sub-menu ul {
@@ -168,18 +173,42 @@ header nav ul li a:hover::before {
   font-weight: 500;
 }
 
-#recommen-container #content {
+#recommen-container #content-container {
+  width: 75vw;
   height: 60vh;
+  overflow: hidden;
 }
 
-#recommen-container #content > div {
+#recommen-container #content-container #content {
+  width: 375vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: 0;
+  left: 0vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#recommen-container #content-container #content > div {
   width: 75vw;
   height: 40vh;
   margin: 10vh 0 15vh;
-  display: none;
 }
 
-#recommen-container #content > div ul {
+#recommen-container #content-container #content > div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,14 +224,18 @@ header nav ul li a:hover::before {
           flex-direction: row;
 }
 
-#recommen-container #content > div ul li span {
+#recommen-container #content-container #content > div ul li {
+  cursor: pointer;
+}
+
+#recommen-container #content-container #content > div ul li span {
   width: 100%;
   height: 100%;
   display: block;
   overflow: hidden;
 }
 
-#recommen-container #content > div ul li span img {
+#recommen-container #content-container #content > div ul li span img {
   width: 100%;
   height: 100%;
   vertical-align: top;
@@ -210,7 +243,7 @@ header nav ul li a:hover::before {
   transition: .5s;
 }
 
-#recommen-container #content > div ul li strong {
+#recommen-container #content-container #content > div ul li strong {
   font-size: 1.1em;
   font-weight: 400;
   text-align: center;
@@ -219,23 +252,19 @@ header nav ul li a:hover::before {
   padding: 1vh 0;
 }
 
-#recommen-container #content > div ul li p {
+#recommen-container #content-container #content > div ul li p {
   font-size: 1em;
   font-weight: 400;
   text-align: center;
   color: #282828;
 }
 
-#recommen-container #content > div ul li:hover span img {
+#recommen-container #content-container #content > div ul li:hover span img {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
 }
 
-#recommen-container #content > div ul li:hover > div * {
+#recommen-container #content-container #content > div ul li:hover > div * {
   font-weight: 500;
-}
-
-#recommen-container #content > div:nth-child(1) {
-  display: block;
 }
 /*# sourceMappingURL=Recommen.css.map */

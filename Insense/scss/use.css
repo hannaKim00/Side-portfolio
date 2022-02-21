@@ -101,6 +101,17 @@ header nav ul li a:hover::before {
   width: 22px;
 }
 
+@media all and (min-width: 1024px) and (max-width: 1920px) {
+  #main-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main-container section {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 #use-container {
   width: 100vw;
   height: 170vh;

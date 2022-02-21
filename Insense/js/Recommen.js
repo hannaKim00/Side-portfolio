@@ -21,20 +21,35 @@ tabClick.forEach(function (tabClick) {
     tabMenu.forEach(function (tabMenu) {
         let tabValue = Number(tabMenu.dataset.tab);
     
-        if(tabClickValue === tabValue) {
-          tabMenu.className = 'on';
-        } else {
-          tabMenu.className = '';
-        }
+        tabClickValue === tabValue ? tabMenu.className = 'on' : tabMenu.className = '';
+        
     });
 
     content.forEach(function (content) {
       let contentValue = Number(content.dataset.tab);
+
       if(tabClickValue === contentValue) {
-        console.log(contentValue);
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
+        switch (contentValue) {
+          case 1:
+            content.parentNode.style.left = '0vw';
+            break;
+
+          case 2:
+            content.parentNode.style.left = '-75vw';
+            break;
+
+          case 3:
+            content.parentNode.style.left = '-150vw';
+          break;
+
+          case 4:
+            content.parentNode.style.left = '-225vw';
+            break;
+            
+          case 5:
+          content.parentNode.style.left = '-300vw';
+          break;
+        };
       }
     });
   });
