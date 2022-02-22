@@ -89,6 +89,7 @@ header {
   left: 0;
   opacity: 0;
   z-index: 10;
+  box-shadow: 10px 0 10px rgba(0,0,0,.02);
 
   @include size-set-color(100vw, 10vh, #F7F3E7CC);
   @include flex-set(flex-end, center, row);

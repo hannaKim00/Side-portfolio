@@ -27,6 +27,8 @@ header {
   left: 0;
   opacity: 0;
   z-index: 10;
+  -webkit-box-shadow: 10px 0 10px rgba(0, 0, 0, 0.02);
+          box-shadow: 10px 0 10px rgba(0, 0, 0, 0.02);
   width: 100vw;
   height: 10vh;
   background: #F7F3E7CC;
