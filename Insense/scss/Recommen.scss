@@ -7,6 +7,9 @@
 .opacity1 {
   opacity: 0;
 }
+.hidden {
+  display: none;
+}
 
 #recommen-container {
   @include size-set-color(100vw, 100vh, $background-color1);
@@ -74,12 +77,52 @@
               @include font-set(1em, 400, center, $font-color2);
             }
           }
-          li:hover span img {
+          li span:hover img {
             transform: scale(1.08);
           }
-          li:hover > div * {
+          li span:hover > div * {
             font-weight: 500;
           }
+        }
+      }
+    }
+
+
+    #modal-container {
+      #modal {
+        @include size-set-color(100vw, 100vh, rgba(0,0,0,.7));
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 12;
+  
+        #text-container {
+          @include size-set-color(30vw,45vh,$background-color1);
+          @include absolute-top-left(50%, 50%, translate(-50%, -50%));
+          @include flex-set(center, center, column);
+          @include font-set(1em, normal, center, $font-color1);
+          box-shadow: 0 0 20px rgba(0,0,0,.1);
+          border-radius: 2vw;
+          padding: 2vw 1vh;
+        }
+
+        h2 {
+          @include font-set(1.5em, 500, center, $font-color1);
+        }
+
+        p {
+          margin: 8vh 0;
+        }
+
+        span {
+          @include size-set(3vw, 3vh);
+          cursor: pointer;
+          border: 1px solid $font-color1;
+          border-radius: .5vw;
+        }
+        span:hover {
+          background-color: $font-color1;
+          color: #fff;
         }
       }
     }

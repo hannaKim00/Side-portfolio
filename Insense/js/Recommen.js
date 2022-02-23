@@ -56,3 +56,39 @@ tabClick.forEach(function (tabClick) {
   });
 })
 
+// 모달창
+const modal = document.querySelector('#modal-container');
+const modalList = document.querySelectorAll('#modal-container #modal');
+const contentLi = document.querySelectorAll('#content ul li');
+const check = document.querySelectorAll('#modal span');
+
+// 처음 화면에 모달창이 보이지 않게함
+modalList.forEach(function (modalList) {
+  modalList.classList.add('hidden');
+});
+
+// 클릭한 content와 modal의 dataset이 같다면 보여짐 
+contentLi.forEach(function (contentLi) {
+  let contentLiNum = Number(contentLi.dataset.modal);
+  
+  modalList.forEach(function (modalList) {
+    let modalNum = Number(modalList.dataset.modal);
+    
+    contentLi.addEventListener('click', function() {
+      if(contentLiNum === modalNum) {
+        modalList.classList.remove('hidden');
+      }
+    });
+
+    // 클릭한 check과 modal의 dataset이 같다면 사라짐
+    check.forEach(function (check) {
+      let checkNum = Number(check.dataset.modal);
+
+      check.addEventListener('click', function() {
+        if(modalNum === checkNum) {
+          modalList.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
