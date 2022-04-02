@@ -58,9 +58,9 @@ tabClick.forEach(function (tabClick) {
 
 // 모달창
 const modal = document.querySelector('#modal-container');
-const modalList = document.querySelectorAll('#modal-container #modal');
+const modalList = document.querySelectorAll('#modal-container .modal');
 const contentLi = document.querySelectorAll('#content ul li');
-const check = document.querySelectorAll('#modal span');
+const check = document.querySelectorAll('.modal span');
 
 // 처음 화면에 모달창이 보이지 않게함
 modalList.forEach(function (modalList) {

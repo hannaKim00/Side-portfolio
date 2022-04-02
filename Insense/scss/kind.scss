@@ -22,7 +22,7 @@
       margin: 5vh 0;
       opacity: 0;
 
-      #textWrap {
+      .textWrap {
         width: 50vw;
         @include font-set(1em, normal, center, $font-color2);
 
@@ -35,7 +35,7 @@
         }
       }
 
-      #imgwrap {
+      .imgwrap {
         width: 50vw;
         @include flex-set(center, center, row);
 
@@ -56,7 +56,7 @@
       @include flex-set(space-evenly, center, row-reverse);
       @include relative-top-left(0, 4vw);
 
-      #imgwrap {
+      .imgwrap {
         @include flex-set(space-evenly, center, row-reverse);
 
         img {
@@ -70,7 +70,7 @@
     }
 
     & > div:nth-child(3) {
-      #imgwrap {
+      .imgwrap {
         div {
           @include size-set-color(15vw, 40vh, #F1D88B80);
         }
@@ -78,7 +78,7 @@
     }
 
     & > div:nth-child(4) {
-      #imgwrap {
+      .imgwrap {
         div {
           @include size-set-color(15vw, 40vh, #3B3B3B80);
         }

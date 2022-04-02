@@ -89,14 +89,14 @@
 
 
     #modal-container {
-      #modal {
+      .modal {
         @include size-set-color(100vw, 100vh, rgba(0,0,0,.7));
         position: fixed;
         top: 0;
         left: 0;
         z-index: 12;
   
-        #text-container {
+        .text-container {
           @include size-set-color(30vw,45vh,$background-color1);
           @include absolute-top-left(50%, 50%, translate(-50%, -50%));
           @include flex-set(center, center, column);

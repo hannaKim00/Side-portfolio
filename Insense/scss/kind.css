@@ -161,7 +161,7 @@ header nav ul li a:hover::before {
   opacity: 0;
 }
 
-#kind-container #content > div #textWrap {
+#kind-container #content > div .textWrap {
   width: 50vw;
   font-size: 1em;
   font-weight: normal;
@@ -169,18 +169,18 @@ header nav ul li a:hover::before {
   color: #282828;
 }
 
-#kind-container #content > div #textWrap strong {
+#kind-container #content > div .textWrap strong {
   font-size: 1.2em;
   font-weight: 500;
   text-align: center;
   color: #282828;
 }
 
-#kind-container #content > div #textWrap p {
+#kind-container #content > div .textWrap p {
   margin-top: 3vh;
 }
 
-#kind-container #content > div #imgwrap {
+#kind-container #content > div .imgwrap {
   width: 50vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,7 +197,7 @@ header nav ul li a:hover::before {
           flex-direction: row;
 }
 
-#kind-container #content > div #imgwrap img {
+#kind-container #content > div .imgwrap img {
   width: 20vw;
   height: 100%;
   position: relative;
@@ -205,7 +205,7 @@ header nav ul li a:hover::before {
   left: 6.5vw;
 }
 
-#kind-container #content > div #imgwrap div {
+#kind-container #content > div .imgwrap div {
   text-indent: -9999em;
   width: 15vw;
   height: 40vh;
@@ -231,7 +231,7 @@ header nav ul li a:hover::before {
   left: 4vw;
 }
 
-#kind-container #content > div:nth-child(2n) #imgwrap {
+#kind-container #content > div:nth-child(2n) .imgwrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,25 +247,25 @@ header nav ul li a:hover::before {
           flex-direction: row-reverse;
 }
 
-#kind-container #content > div:nth-child(2n) #imgwrap img {
+#kind-container #content > div:nth-child(2n) .imgwrap img {
   position: relative;
   top: 0;
   left: -7vw;
 }
 
-#kind-container #content > div:nth-child(2n) #imgwrap div {
+#kind-container #content > div:nth-child(2n) .imgwrap div {
   width: 15vw;
   height: 40vh;
   background: #914D2E80;
 }
 
-#kind-container #content > div:nth-child(3) #imgwrap div {
+#kind-container #content > div:nth-child(3) .imgwrap div {
   width: 15vw;
   height: 40vh;
   background: #F1D88B80;
 }
 
-#kind-container #content > div:nth-child(4) #imgwrap div {
+#kind-container #content > div:nth-child(4) .imgwrap div {
   width: 15vw;
   height: 40vh;
   background: #3B3B3B80;
